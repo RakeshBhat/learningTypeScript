@@ -1,42 +1,53 @@
-#ForLoop
-#------------------------------------------------------------------------------------------------------------------------------
-#1. I need to get all the voter ids in the list of Persons, How do I loop through a custom Object array and get back list of ids?
-#Sample Code:
-#Create a Person object
+// #ForLoop
+//------------------------------------------------------------------------------------------------------------------------------
+//1. I need to get all the voter ids in the list of Persons, How do I loop through a custom Object array and get back list of ids?
+//Sample Code:
+
+//Create a Person object
 interface Person {
   firstName: string;
   lastName:  string;
   voterId: number
 }
 
-#let's populate some data
+// let's populate some data
 persons = [{
 	firstName: "jai",
   lastName:  "om",
-  voterId: 12345
+  voterId: 5678
 },
 {
 	firstName: "hari",
   lastName:  "om",
-  voterId: 12345
+  voterId: 9012
 },
 {
-	firstName: "shree",
+	firstName: "sham",
   lastName:  "om",
-  voterId: 12345
+  voterId: 3456
 },
 {
 	firstName: "ram",
   lastName:  "om",
-  voterId: 4435
+  voterId: 7890
 }];
-#create an array to hold all the Ids
+
+//Create an array to hold all the Ids
 let voterIds = new Array();
-#loop through the Person and push only ids to an array
+
+//Loop through the Person array and push only ids to previously created array.
+// Using for..of loop
 for(var p of persons){
-ids.push(person.voterId);
+    voterIds.push(p.voterId);
 }
+
 console.log("full list of voter Ids: ", voterIds);
+
+// BONUS TIP: we can use for..in loop as well, that uses the array index
+
+for(var idx in persons){
+  voterIds.push(persons[idx].voterId)
+}
 
 ### Output: "full list of ids: ", [12345, 12345, 12345, 12345]
 #------------------------------------------------------------------------------------------------------------------------------
