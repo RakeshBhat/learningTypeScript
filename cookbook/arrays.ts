@@ -88,3 +88,29 @@ console.log(result1);
 
 //------------------------------------------------------------------------------------------------------------------------------
 
+// 3. How do I remove an array item in TypeScript?
+let testArray = [
+    { "id": 1, "name": 'Apple' },
+    { "id": 2, "name": 'Bat' },
+    { "id": 3, "name": 'Cat' },
+    { "id": 4, "name": 'Dog' }
+]
+
+let testArray2 = [];
+const itemToRemove = 3;
+testArray2 = testArray.filter(item => item.id !== itemToRemove);
+console.log(testArray2);
+
+// Output
+/*
+// [{
+//   "id": 1,
+//   "name": "Apple"
+// }, {
+//   "id": 2,
+//   "name": "Bat"
+// }, {
+//   "id": 4,
+//   "name": "Dog"
+// }] 
+*/
