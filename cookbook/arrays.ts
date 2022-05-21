@@ -52,7 +52,7 @@ for(var idx in persons){
 // Output: "full list of ids: ", [5678, 9012, 3456, 7890]
 // ------------------------------------------------------------------------------------------------------------------------------
 
-// How to find if two arrays contain any common items
+//2. How to find if two arrays contain any common items
 interface ThisInventory{
     code: number;
     name: string;
@@ -76,3 +76,15 @@ inventory2 = [
 const result1 = inventory1.filter(o => inventory2.some(({code,name}) => o.code === code 
 && o.name === name));
 console.log(result1);
+
+// Output:
+/*
+// [{
+//   "code": 81,
+//   "name": "bananas",
+//   "quantity": 0
+// }]
+*/
+
+//------------------------------------------------------------------------------------------------------------------------------
+
